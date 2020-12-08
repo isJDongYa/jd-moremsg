@@ -1,3 +1,10 @@
+<!--
+ * @Author: isJDongYa
+ * @LastEditors: isJDongYa
+ * @Date: 2020-12-07 19:31:31
+ * @LastEditTime: 2020-12-08 16:02:18
+ * @Description: 
+-->
 # jd-moremsg
 
 ## Project setup
@@ -7,7 +14,7 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run dev
 ```
 
 ### Compiles and minifies for production

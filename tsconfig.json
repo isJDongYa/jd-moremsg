@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "es6",
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
@@ -18,7 +18,10 @@
     ],
     "paths": {
       "@/*": [
-        "src/*"
+        "examples/*"
+      ],
+      "@lib/*": [
+        "lib/*"
       ]
     },
     "lib": [
@@ -29,9 +32,12 @@
     ]
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
+    "examples/**/*.ts",
+    "examples/**/*.tsx",
+    "examples/**/*.vue",
+    "lib/**/*.ts",
+    "lib/**/*.tsx",
+    "lib/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
   ],
