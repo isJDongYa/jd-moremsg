@@ -23,7 +23,7 @@
       )"
     >
       <slot name="custom"></slot>
-      {{ text }}
+      <div class="more-msg-text">{{ text }}</div>
     </div>
   </div>
 </template>
@@ -128,11 +128,17 @@ export default class MoreMsg extends Vue {
       this.isShow = false
     }
 
-    public mounted():void {
-      window.addEventListener('resize' , () => {
+    public resizeListenerFn():void {
         this.winWidth = document.body.clientWidth
         this.winHeigh = document.body.clientHeight
-      })
+      }
+
+    public mounted():void {
+      window.addEventListener('resize' , this.resizeListenerFn)
+    }
+
+    public destroyed():void {
+      window.removeEventListener('resize', this.resizeListenerFn)
     }
 
 }
@@ -143,7 +149,9 @@ export default class MoreMsg extends Vue {
   position: fixed;
   font-size: 16px;
   background-color: #fff;
-  padding: 10px;
   overflow: hidden;
+}
+.more-msg-text {
+  padding: 10px;
 }
 </style>

@@ -1,11 +1,14 @@
 <template>
   <div id="app">
-    <jd-moremsg text="bbbbb" :setup="{
+    <jd-moremsg 
+    text="This is more message" 
+    :setup="{
       background:'#ddd'
     }"
     follow="follow"
     >
-      aaaa
+      <img class="img" slot="custom" src="./assets/imgs/header.jpg" alt="img">
+      <button class="btn">This is a button in default slot</button>
     </jd-moremsg>
   </div>
 </template>
@@ -26,8 +29,18 @@ export default class App extends Vue {}
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  height: 100px;
+}
+.img {
+  width: 300px;
 }
 </style>
