@@ -60,10 +60,9 @@ export default class MoreMsg extends Vue {
   }
 
   @Prop({default: ''}) private text?:string;
-  @Prop({default: false}) private show?:boolean;
   @Prop() 
   private setup?:Setup;
-  @Prop() private follow?:string;
+  @Prop({default: ''}) private follow?:string;
     
     public get computedSetup():Setup {
       return Object.assign(this.defaultSetup, this.setup)

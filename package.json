@@ -5,7 +5,7 @@
   "license": "MIT",
   "private": false,
   "author": "isJDongYa",
-  "description": "",
+  "description": "一个基于vue的“更多信息”的单个组件",
   "files": ["dist/**/*"],
   "keywords": [
     "vue",
