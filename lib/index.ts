@@ -15,7 +15,7 @@ const components: {
 };
 
 const install = (Vue:VueConstructor, options?:ComponentOptions<Vue>) => {
-
+  
   for (const key in components) {
     if (components.hasOwnProperty(key)) {
       const component = components[key];

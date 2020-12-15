@@ -1,27 +1,48 @@
-/*
- * @Author: isJDongYa
- * @LastEditors: isJDongYa
- * @Date: 2020-12-07 19:47:54
- * @LastEditTime: 2020-12-07 20:05:44
- * @Description: 配置文件
- */
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
- const path = require('path')
- const resolve = path.resolve
 
- module.exports = {
-   pages: {
-     index: {
-      entry: 'examples/main.ts',
-      template: 'public/index.html',
-      filename: 'index.html'
+const path = require('path')
+const resolve = path.resolve
+let config = {}
+if(process.env.NODE_ENV === 'development') {
+  config = {
+    pages: {
+      index: {
+        entry: 'examples/main.ts'
+      }
+    }
+  }
+} else if(process.env.NODE_ENV === 'production') {
+  config = {
+    pages: {
+      index: {
+        entry: 'lib/index.ts'
+      }
+    },
+    configureWebpack: {
+     mode:'production',
+     plugins: [
+       new BundleAnalyzerPlugin()
+     ],
+     externals: {
+        'vue': 'Vue',
+        'vue-property-decorator': 'vue-property-decorator',
+        "core-js": "core-js",
      }
    },
-  //  configureWebpack: {
-  //    resolve: {
-  //      alias: {
-  //        '@': resolve(__dirname, './examplaes')
-  //      }
-  //    }
-  //  }
- }
+    productionSourceMap: false,
+    css: { extract: false }
+    // 去掉文件名中的 hash
+    // filenameHashing: false,
+    // // 删除 HTML 相关的 webpack 插件
+    // chainWebpack: config => {
+    //   config.plugins.delete('html-index')
+    //   config.plugins.delete('preload-index')
+    //   config.plugins.delete('prefetch-index')
+    //   config.plugins.delete('copy')
+    // }
+  }
+}
+
+
+module.exports = config

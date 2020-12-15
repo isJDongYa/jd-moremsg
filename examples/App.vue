@@ -3,7 +3,7 @@
     <jd-moremsg text="bbbbb" :setup="{
       background:'#ddd'
     }"
-    :follow="true"
+    follow="follow"
     >
       aaaa
     </jd-moremsg>

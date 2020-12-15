@@ -10,7 +10,8 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
+    "sourceMap": false,
+    "declaration": true,
     "baseUrl": ".",
     "types": [
       "webpack-env",
@@ -42,6 +43,7 @@
     "tests/**/*.tsx"
   ],
   "exclude": [
-    "node_modules"
-  ]
+    "node_modules",
+  ],
+  
 }

@@ -1,20 +1,28 @@
 {
   "name": "jd-moremsg",
   "version": "0.1.0",
-  "main": "dist/common.umd.min.js",
+  "main": "dist/jd-moremsg.umd.min.js",
   "license": "MIT",
   "private": false,
   "author": "isJDongYa",
   "description": "",
-  "keywords": ["vue", "more", "message", "component"],
+  "files": ["dist/**/*"],
+  "keywords": [
+    "vue",
+    "more",
+    "message",
+    "component"
+  ],
   "repository": {
-    
+    "type": "git",
+    "url": "https://github.com/isJDongYa/jd-moremsg.git"
   },
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lib": "vue-cli-service build --target lib --name jd-moremsg --dest dist lib/index.js"
+    "lib": "vue-cli-service build --target lib --name jd-moremsg --dest dist lib/index.ts",
+    "wc": "vue-cli-service build --target wc --name jd-moremsg lib/MoreMsg/MoreMsg.vue"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -32,6 +40,7 @@
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
     "typescript": "~3.9.3",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "webpack-bundle-analyzer": "^4.2.0"
   }
 }

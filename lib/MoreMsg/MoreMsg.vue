@@ -53,7 +53,7 @@ export default class MoreMsg extends Vue {
   public install: any = undefined;
 
   private defaultSetup:Setup = {
-        duration: 3000,
+        duration: 2000,
         width: 'auto',
         height: 'auto',
         background: '#fff'
@@ -63,7 +63,7 @@ export default class MoreMsg extends Vue {
   @Prop({default: false}) private show?:boolean;
   @Prop() 
   private setup?:Setup;
-  @Prop({default: false}) private follow?:boolean;
+  @Prop() private follow?:string;
     
     public get computedSetup():Setup {
       return Object.assign(this.defaultSetup, this.setup)
@@ -83,20 +83,23 @@ export default class MoreMsg extends Vue {
         this.isShow = true  
       }, duration);
 
-    };
+    }
 
     public moveMoreText(e:MouseEvent):void {
-      if(this.follow) {
+      if (!this.isShow) {
         this.setPosition(e)
       } else {
-        if (!this.isShow) {
+        if(this.follow === 'follow') {
           this.setPosition(e)
+        } else if(this.follow === 'none') {
+          this.isShow = false
         }
       }
-    };
+      
+    }
 
     public setPosition(e:MouseEvent):void {
-      let offset = 10
+      let offset = 3
       let isRight = true
       let isBottom = true
       if(this.winWidth < e.clientX + offset + this.moreTextWidth) {
@@ -117,21 +120,21 @@ export default class MoreMsg extends Vue {
       } else {
         this.position.top = e.clientY - this.moreTextHeight - offset + 'px'
       } 
-    };
+    }
     
     public closeMoreText(e:MouseEvent):void {
       if(this.timer) {
         clearTimeout(this.timer)
       }
       this.isShow = false
-    };
+    }
 
     public mounted():void {
       window.addEventListener('resize' , () => {
         this.winWidth = document.body.clientWidth
         this.winHeigh = document.body.clientHeight
       })
-    };
+    }
 
 }
 
@@ -139,7 +142,6 @@ export default class MoreMsg extends Vue {
 <style lang="less" scoped>
 .more-msg-contain {
   position: fixed;
-  border-radius: 8px;
   font-size: 16px;
   background-color: #fff;
   padding: 10px;
