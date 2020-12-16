@@ -105,7 +105,7 @@ follow="follow"
   <button class="btn">This is a button in default slot</button>
 </jd-moremsg>
 ```
-![example](https://raw.githubusercontent.com/isJDongYa/jd-moremsg/master/examples/assets/imgs/example.gif)
+![example](https://raw.githubusercontent.com/isJDongYa/jd-moremsg/master/examples/assets/imgs/header.jpg)
 
 
 

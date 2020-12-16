@@ -1,10 +1,3 @@
-<!--
- * @Author: isJDongYa
- * @LastEditors: isJDongYa
- * @Date: 2020-12-07 16:32:14
- * @LastEditTime: 2020-12-08 15:59:36
- * @Description: 显示更多信息
--->
 <template>
   <div 
     class="more-msg"
@@ -33,7 +26,9 @@ import { Vue, Component, Prop } from 'vue-property-decorator'
 
 import { Setup } from '@lib/types'
 
-@Component
+@Component({
+  name: 'MoreMsg'
+})
 export default class MoreMsg extends Vue {
 
   private winWidth:number = document.body.clientWidth;
