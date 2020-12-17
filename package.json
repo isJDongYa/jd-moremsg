@@ -1,6 +1,6 @@
 {
   "name": "jd-moremsg",
-  "version": "0.1.2",
+  "version": "0.1.2.1",
   "main": "dist/jd-moremsg.umd.min.js",
   "license": "MIT",
   "private": false,
@@ -39,10 +39,16 @@
     "@vue/cli-plugin-unit-jest": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/test-utils": "^1.0.3",
+    "cz-conventional-changelog": "^3.3.0",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
     "typescript": "~3.9.3",
     "vue-template-compiler": "^2.6.11",
     "webpack-bundle-analyzer": "^4.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
