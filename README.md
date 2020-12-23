@@ -1,11 +1,4 @@
-<!--
- * @Author: isJDongYa
- * @LastEditors: isJDongYa
- * @Date: 2020-12-07 19:31:31
- * @LastEditTime: 2020-12-08 16:02:35
- * @Description: 
--->
-# jd-moremsg
+# jmoremsg
 
 - 一个基于vue的“更多信息”的单个组件
 - 根据包裹组件所在位置自动调整显示位置
@@ -14,9 +7,9 @@
 ## setup
 
 ```shell
-npm install jd-moremsg --save
+npm install @jdorg/jmoremsg --save
 
-import JDMoremsg from 'jd-moremsg'
+import JDMoremsg from '@jdorg/jmoremsg'
 
 Vue.use(JDMoremsg) 
 ```
@@ -55,11 +48,11 @@ interface Setup {
 
 ```ts
 private defaultSetup:Setup = {
-        duration: 2000,
-        width: 'auto',
-        height: 'auto',
-        background: '#fff'
-  }
+  duration: 2000,
+  width: 'auto',
+  height: 'auto',
+  background: '#fff'
+}
 ```
 
 ### follow
@@ -96,16 +89,29 @@ private defaultSetup:Setup = {
 ## example
 
 ```html
-<jd-moremsg 
+<jmoremsg 
 text="This is more message" 
 :setup="{ background:'#ddd' }"
 follow="follow"
 >
   <img class="img" slot="custom" src="./assets/imgs/header.jpg" alt="img">
   <button class="btn">This is a button in default slot</button>
-</jd-moremsg>
+</jmoremsg>
 ```
+
+```less
+.btn {
+  height: 100px;
+}
+.img {
+  width: 300px;
+}
+```
+
 ![example](https://raw.githubusercontent.com/isJDongYa/jmoremsg/master/examples/assets/imgs/example.gif)
 
+## 其它
 
+@jdorg是一个开源前端组件的社区，如果你有开源组件的想法，欢迎加入我们
 
+![qqqun](./examples/assets/imgs/@jdorg.jpg)

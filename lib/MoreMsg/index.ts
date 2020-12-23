@@ -4,7 +4,7 @@ import MoreMsg from './MoreMsg.vue';
 
 Object.assign(MoreMsg, {
   install(Vue:VueConstructor){
-    Vue.component('jd-moremsg', MoreMsg);
+    Vue.component('jmoremsg', MoreMsg);
    }
 })
 

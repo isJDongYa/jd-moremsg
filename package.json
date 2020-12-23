@@ -1,12 +1,14 @@
 {
   "name": "@jdorg/jmoremsg",
   "version": "0.1.2",
-  "main": "dist/jd-moremsg.umd.min.js",
+  "main": "dist/jmoremsg.umd.min.js",
   "license": "MIT",
   "private": false,
-  "author": "isJDongYa",
+  "author": "jdongchen",
   "description": "一个基于vue的“更多信息”的单个组件",
-  "files": ["dist/**/*"],
+  "files": [
+    "dist/**/*"
+  ],
   "keywords": [
     "vue",
     "more",
@@ -21,8 +23,8 @@
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lib": "vue-cli-service build --target lib --name jd-moremsg --dest dist lib/index.ts",
-    "wc": "vue-cli-service build --target wc --name jd-moremsg lib/MoreMsg/MoreMsg.vue"
+    "lib": "vue-cli-service build --target lib --name jmoremsg --dest dist lib/index.ts",
+    "wc": "vue-cli-service build --target wc --name jmoremsg lib/MoreMsg/MoreMsg.vue"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -37,10 +39,16 @@
     "@vue/cli-plugin-unit-jest": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/test-utils": "^1.0.3",
+    "cz-conventional-changelog": "^3.3.0",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
     "typescript": "~3.9.3",
     "vue-template-compiler": "^2.6.11",
     "webpack-bundle-analyzer": "^4.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

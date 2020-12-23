@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <jd-moremsg 
+    <jmoremsg 
     text="This is more message" 
     :setup="{
       background:'#ddd'
@@ -9,7 +9,7 @@
     >
       <img class="img" slot="custom" src="./assets/imgs/header.jpg" alt="img">
       <button class="btn">This is a button in default slot</button>
-    </jd-moremsg>
+    </jmoremsg>
   </div>
 </template>
 
