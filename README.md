@@ -114,4 +114,4 @@ follow="follow"
 
 @jdorg是一个开源前端组件的社区，如果你有开源组件的想法，欢迎加入我们
 
-![qqqun](./examples/assets/imgs/@jdorg.jpg)
+![qqgroup](https://raw.githubusercontent.com/isJDongYa/jmoremsg/master/examples/assets/imgs/@jdorg_z.jpg)
