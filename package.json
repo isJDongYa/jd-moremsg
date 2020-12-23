@@ -1,6 +1,6 @@
 {
   "name": "@jdorg/jmoremsg",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "main": "dist/jmoremsg.umd.min.js",
   "license": "MIT",
   "private": false,

@@ -110,7 +110,7 @@ follow="follow"
 
 ![example](https://raw.githubusercontent.com/isJDongYa/jmoremsg/master/examples/assets/imgs/example.gif)
 
-## 其它
+## others
 
 @jdorg是一个开源前端组件的社区，如果你有开源组件的想法，欢迎加入我们
 
