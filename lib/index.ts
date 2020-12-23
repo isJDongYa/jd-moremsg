@@ -14,6 +14,10 @@ const components: {
   MoreMsg
 };
 
+const componentsName = {
+  MoreMsg: 'moremsg'
+}
+
 const install = (Vue:VueConstructor, options?:ComponentOptions<Vue>) => {
   
   for (const key in components) {
@@ -32,4 +36,5 @@ if (typeof window !== 'undefined' && window.Vue) {
 export default {
   install,
   ...components
+  
 }

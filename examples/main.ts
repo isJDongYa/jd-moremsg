@@ -9,6 +9,10 @@ import Vue from 'vue'
 import App from './App.vue'
 
 import Lib from '../lib'
+// import Lib from './jd-moremsg.umd.min.js'
+
+// console.dir(Lib.MoreMsg.options.name);
+
 
 Vue.use(Lib)
 

@@ -13,6 +13,7 @@
     "sourceMap": false,
     "declaration": true,
     "baseUrl": ".",
+    "allowJs": true,
     "types": [
       "webpack-env",
       "jest"

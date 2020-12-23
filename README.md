@@ -9,7 +9,7 @@
 
 - 一个基于vue的“更多信息”的单个组件
 - 根据包裹组件所在位置自动调整显示位置
-- 默认显示位置为right-bottom, 距离鼠标指针 [ 5px, 5px ], 请注意，该默认位置并未提供修改prop
+- 默认显示位置为right-bottom, 距离鼠标指针 [ 3px, 3px ], 请注意，该默认位置并未提供修改prop
 
 ## setup
 
@@ -105,7 +105,7 @@ follow="follow"
   <button class="btn">This is a button in default slot</button>
 </jd-moremsg>
 ```
-![example](https://raw.githubusercontent.com/isJDongYa/jd-moremsg/master/examples/assets/imgs/example.gif)
+![example](https://raw.githubusercontent.com/isJDongYa/jmoremsg/master/examples/assets/imgs/example.gif)
 
 
 

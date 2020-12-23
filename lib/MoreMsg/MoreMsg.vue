@@ -36,6 +36,8 @@ import { Setup } from '@lib/types'
 @Component
 export default class MoreMsg extends Vue {
 
+  static name = 'MoreMsg'
+
   private winWidth:number = document.body.clientWidth;
   private winHeigh:number = document.body.clientHeight;
   private isShow:boolean = false;
